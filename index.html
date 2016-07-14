@@ -1,0 +1,63 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!--
+  angular-starter-kit
+
+  @author Andrea SonnY <andreasonny83@gmail.com>
+  @copyright 2016 Andrea SonnY <andreasonny83@gmail.com>
+
+  This code may only be used under the MIT style license.
+
+  @license MIT  https://andreasonny.mit-license.org/@2016/
+ -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Service Workers">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Worker Demo</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <div class="header">
+      <h1 class="header__h1">Service Worker</h1>
+      <p class="header__subtitle">Demo project</p>
+    </div>
+
+    <div class="content">
+      <h2>I can work offline. Give me a try!</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="footer">
+      &copy; Copyright 2016 andreasonny83
+    </div>
+  </div>
+
+  <script src="scripts/app.js"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registered with scope: ', registration.scope);
+      })
+      .catch(function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  }
+  </script>
+  <!-- Built with love by @andreasonny83 -->
+</body>
+</html>

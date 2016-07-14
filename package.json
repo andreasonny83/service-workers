@@ -1,0 +1,22 @@
+{
+  "name": "service-workers",
+  "version": "0.0.0",
+  "description": "A demo project for service workers",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "start": "node_modules/http-server/bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://andreasonny83@github.com/andreasonny83/service-workers.git"
+  },
+  "author": "Andrea Sonny <andreasonny83@gmail.com> (https://github.com/andreasonny83)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreasonny83/service-workers/issues"
+  },
+  "homepage": "https://github.com/andreasonny83/service-workers#readme"
+}
